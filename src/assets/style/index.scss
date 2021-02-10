@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap');
+
+$--bg-color: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
+
+$--blue: #2A45C2;
+$--gray: #565468;
+
+$--button-font: #3B4262;
+
+body {
+    background: $--bg-color; 
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.score-table {
+    width: 70%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid rgba(255, 255, 255, 0.289199);
+    border-radius: 15px;
+    max-width: 700px;
+    padding: 0px 25px;
+    box-sizing: border-box;
+}
+
+.score-card {
+    height: 80%;
+    width: 35%;
+    max-height: 115px;
+    max-width: 150px;
+    background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-card h2 {
+   color: $--blue;
+   font-size: 16px;
+}
+
+.score-card h1 {
+    color: $--gray;
+    font-size: 64px;
+}
+
+.hand-select-wrapper {
+    width: 40%;
+    height: 50%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: url('../img/polygon-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    background-position: center;
+}
+
+
+.hand-select-top{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hand-select-center {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hand-select-bottom {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hand-select-wrapper img{
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    animation: popUp 0.5s ease;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+}
+
+.hand-select-wrapper img:hover{
+    box-shadow: 0px 0px 0px 20px rgba($color: #FFFFFF, $alpha: 0.05);
+}
+
+.draw-wrapper {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.draw-col{
+    height: 90%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.draw-col h1 {
+    font-size: 24px;
+}
+
+.draw-col img {
+    width: 100%;
+    animation: popUp 0.5s ease;
+    transition: all 0.5s ease;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+    border-radius: 50%;
+}
+
+@keyframes popUp {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+
+    }
+  }
+
+.pick-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: popUp 0.5s ease;
+    background: #000000;
+    opacity: 18%;
+    margin: auto;
+}
+
+.draw-result {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: popUp 0.5s ease;
+
+}
+
+.draw-result h2 {
+    font-size: 56px;
+}
+
+.draw-result button {
+    width: 230px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 2.5px;
+    color: $--button-font;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.draw-result button:hover{
+    opacity: 0.7;
+}
+
+
+.rules-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8%;
+}
+
+.rules-footer button {
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    color: white;
+    letter-spacing: 2.5px;
+    background:transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.rules-footer button:hover {
+    background:white;
+    color: $--button-font;
+}
+
+.rules-wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rules-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    background: white;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.rules-card-top {
+    width: 85%;
+    height: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rules-card-top h1 {
+    color: $--button-font;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.rules-card-top img {
+    cursor: pointer;
+}
+
+.rules-card-image{
+    height: 72%;
+    display: flex;
+    align-items: center;
+}
+
+.rules-bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: black;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 50%;
+}
+
+.win-circle img {
+    box-shadow: 
+    0px 0px 0px 70px rgba($color: #FFFFFF, $alpha: 0.05),
+    0px 0px 0px 170px rgba($color: #FFFFFF, $alpha: 0.05),
+    0px 0px 0px 270px rgba($color: #FFFFFF, $alpha: 0.05)
+    ;
+    border-radius: 50%;
+}
+
+
+@media screen and (max-width: 992px) {
+   .score-table {
+    width: 90%;
+    height: 120px;
+    padding: 0px 13px 0px 25px;
+   }
+
+   .score-table img {
+       height: 60%;
+   }
+
+   .score-card {
+       width: 33%;
+   }
+
+   .score-card h2 {
+       font-size: 12px;
+       letter-spacing: 1.56px;
+   }
+
+   .hand-select-wrapper {
+       width: 90%;
+   }
+
+   .hand-select-wrapper img{
+       width: 120px;
+       height: 120px;
+   }
+
+   .rules-footer{
+       padding: 0;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .draw-col {
+       flex-direction: column-reverse;
+       height: 40%;
+       width: 47%;
+   }
+
+   .draw-col h1 {
+       font-size: 15px;
+   }
+
+   .draw-col img {
+       width: 70%;
+   }
+
+   .draw-wrapper {
+    align-items: flex-start;
+   }
+
+   .draw-result {
+       position: absolute;
+       bottom: 18%;
+       width: 100%;
+   }
+
+   .pick-circle {
+       width: 100px;
+       height: 100px;
+       margin: 0;
+   }
+
+   .rules-card {
+       width: 100%;
+       height: 100%;
+   }
+
+   .rules-card-top {
+       width: 100%;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .rules-card-top img {
+       position: absolute;
+       z-index: 10;
+       bottom: 10%;
+       margin: auto;
+   }
+
+   .rules-bg{
+       display: none;
+   }
+
+   .rules-card-image {
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .rules-card-image img {
+       width: 80%;
+   }
+
+   .win-circle img {
+    box-shadow: 
+    0px 0px 0px 20px rgba($color: #FFFFFF, $alpha: 0.05),
+    0px 0px 0px 45px rgba($color: #FFFFFF, $alpha: 0.05),
+    0px 0px 0px 80px rgba($color: #FFFFFF, $alpha: 0.05)
+    ;
+    border-radius: 50%;
+}
+
+  }
